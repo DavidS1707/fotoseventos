@@ -27,16 +27,11 @@ class NavBar extends StatelessWidget {
             ), // Nombre del usuario
             accountEmail: Text(userEmail), // Correo del usuario
             currentAccountPicture: CircleAvatar(
-              backgroundColor: Colors.blue,
+              backgroundColor: Colors.brown,
               radius: 50.0,
-              backgroundImage: AssetImage('assets/images/fotoperfil.png'),
             ),
             decoration: BoxDecoration(
-              //color: Colors.blue[300],
-              image: const DecorationImage(
-                image: AssetImage('assets/images/fondonavbar.jpg'),
-                fit: BoxFit.cover,
-              ),
+              color: Colors.blue[300],
             ),
           ),
           // Resto de los elementos del Drawer
@@ -72,8 +67,7 @@ class NavBar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text("Cerrar Sesión"),
-            onTap:
-                onExit, // Llama a la función de cierre de sesión proporcionada desde Inicio
+            onTap: onExit,
           ),
         ],
       ),

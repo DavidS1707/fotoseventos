@@ -1,7 +1,7 @@
 // ignore_for_file: file_names, use_build_context_synchronously
 import 'dart:convert';
 import 'package:fotoseventos/Screens/Login.dart';
-import 'package:fotoseventos/Screens/MenuPrincipal.dart';
+import 'package:fotoseventos/Screens/Notificacion.dart';
 import 'package:fotoseventos/Servicios/auth_services.dart';
 import 'package:fotoseventos/Servicios/var.dart';
 import 'package:http/http.dart' as http;
@@ -34,7 +34,7 @@ class _RegisterPageState extends State<RegisterPage> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) => Inicio(
+            builder: (BuildContext context) => NotificationScreen(
               userName: userName,
               userEmail: userEmail,
             ),

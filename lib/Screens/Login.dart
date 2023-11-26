@@ -3,7 +3,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:fotoseventos/Screens/MenuPrincipal.dart';
 import 'package:fotoseventos/Screens/Notificacion.dart';
 import 'package:fotoseventos/Screens/Register.dart';
 import 'package:fotoseventos/Servicios/auth_services.dart';
