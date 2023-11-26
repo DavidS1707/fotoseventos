@@ -91,7 +91,8 @@ class FirebaseApi {
 
   Future<void> sendTokenToBackend(String? fCMToken) async {
     if (fCMToken != null) {
-      const url = 'https://tu-backend.com/save-fcm-token';
+      const url =
+          'https://tu-backend.com/save-fcm-token'; //cabiar por la url de la api en laravel
       final response = await http.post(
         Uri.parse(url),
         body: {'token': fCMToken},
