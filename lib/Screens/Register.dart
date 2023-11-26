@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, use_build_context_synchronously
 import 'dart:convert';
 import 'package:fotoseventos/Screens/Login.dart';
+import 'package:fotoseventos/Screens/MenuPrincipal.dart';
 import 'package:fotoseventos/Servicios/auth_services.dart';
 import 'package:fotoseventos/Servicios/var.dart';
 import 'package:http/http.dart' as http;
@@ -29,16 +30,16 @@ class _RegisterPageState extends State<RegisterPage> {
       if (response.statusCode == 200) {
         messageSnackBar(context, 'Registrado correctamente!');
         String userName = responseMap['user']['name'];
-        // String userEmail = responseMap['user']['email'];
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (BuildContext context) => Inicio(
-        //       userName: userName,
-        //       userEmail: userEmail,
-        //     ),
-        //   ),
-        // );
+        String userEmail = responseMap['user']['email'];
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => Inicio(
+              userName: userName,
+              userEmail: userEmail,
+            ),
+          ),
+        );
       } else {
         errorSnackBar(context, responseMap.values.first[0]);
       }
