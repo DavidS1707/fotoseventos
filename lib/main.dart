@@ -33,7 +33,10 @@ class _MyAppState extends State<MyApp> {
       ),
       navigatorKey: navigatorKey,
       routes: {
-        NotificationScreen.route: (context) => const NotificationScreen()
+        NotificationScreen.route: (context) => const NotificationScreen(
+              userName: '',
+              userEmail: '',
+            )
       },
     );
   }
